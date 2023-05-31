@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import FirebaseContext from '../context/firebase';
 import * as ROUTES from '../constants/routes';
+import Modal from '../components/modal';
 
 export default function Login() {
   const history = useHistory();
@@ -35,7 +36,7 @@ export default function Login() {
       <div className="hidden lg:flex w-5/5 lg:w-3/5">
         <img src="/images/iphone-with-profile.jpg" alt="iPhone with Instagram app" />
       </div>
-      <div className="flex flex-col w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
+      <div className="flex flex-col items-center w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
             <img src="/images/logo.png" alt="Instagram" className="mt-2 mb-4" />
@@ -82,6 +83,7 @@ export default function Login() {
             </Link>
           </p>
         </div>
+        <Modal />
       </div>
     </div>
   );
