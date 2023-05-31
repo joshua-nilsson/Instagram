@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import PropTypes from 'prop-types';
 import User from './user';
 import Suggestions from './suggestions';
 import LoggedInUserContext from '../../context/logged-in-user';
@@ -16,13 +15,3 @@ export default function Sidebar() {
     </div>
   );
 }
-
-Sidebar.propTypes = {
-  user: PropTypes.shape({
-    userId: PropTypes.string,
-    username: PropTypes.string,
-    fullName: PropTypes.string,
-    following: PropTypes.array,
-    docId: PropTypes.string
-  })
-};
