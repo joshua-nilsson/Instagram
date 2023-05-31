@@ -1,7 +1,9 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+// import { seedDatabase } from '../seed';
 
+// replace these with your own config values from Firebase!
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -13,5 +15,7 @@ const config = {
 
 const firebase = Firebase.initializeApp(config);
 const { FieldValue } = Firebase.firestore;
+
+// seedDatabase(firebase);
 
 export { firebase, FieldValue };
