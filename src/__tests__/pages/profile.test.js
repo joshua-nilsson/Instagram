@@ -95,12 +95,12 @@ describe('<Profile />', () => {
           const childrenDontHaveText = Array.from(node.children).every((child) => !hasText(child));
           return nodeHasText && childrenDontHaveText;
         });
+      });
 
-        // now sign the user out
-        fireEvent.click(getByTitle('Sign Out'));
-        fireEvent.keyDown(getByTitle('Sign Out'), {
-          key: 'Enter'
-        });
+      // now sign the user out
+      fireEvent.click(getByTitle('Sign Out'));
+      fireEvent.keyDown(getByTitle('Sign Out'), {
+        key: 'Enter'
       });
     });
   });
@@ -248,7 +248,7 @@ describe('<Profile />', () => {
   it('renders the profile page but there is no user so redirect happens', async () => {
     await act(async () => {
       getUserByUsername.mockImplementation(() => []);
-      getUserPhotosByUsername.mockImplementation(() => photosFixture);
+      getUserPhotosByUsername.mockImplementation(() => []);
       useUser.mockReturnValue(null);
 
       render(
