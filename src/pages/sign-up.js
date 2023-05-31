@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import FirebaseContext from '../context/firebase';
 import * as ROUTES from '../constants/routes';
 import { doesUsernameExist } from '../services/firebase';
+import Modal from '../components/modal';
 
 export default function SignUp() {
   const history = useHistory();
@@ -75,7 +76,7 @@ export default function SignUp() {
           className="object-scale-down"
         />
       </div>
-      <div className="flex flex-col w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
+      <div className="flex flex-col items-center w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
             <img src="/images/logo.png" alt="Instagram" className="mt-2 mb-4 object-scale-down" />
@@ -138,6 +139,7 @@ export default function SignUp() {
             </Link>
           </p>
         </div>
+        <Modal />
       </div>
     </div>
   );
