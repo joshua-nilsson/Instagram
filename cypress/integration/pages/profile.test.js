@@ -11,7 +11,7 @@ describe('Profile', () => {
       cy.get('div').should('contain.text', 'raphael');
       cy.get('div').should('contain.text', 'Raffaello Sanzio da Urbino');
       cy.get('div').should('contain.text', '5 photos');
-      cy.get('div').should('contain.text', '2 followers');
+      cy.get('div').should('contain.text', '3 followers');
       cy.get('div').should('contain.text', '0 following');
 
       // further tasks, check for images + alt tags
