@@ -49,6 +49,7 @@ describe('Dashboard', () => {
 
   it('logs the user in and then signs out', () => {
     cy.get('[data-testid="sign-out"]').click();
+    cy.wait(1000);
     cy.get('div').should('contain.text', "Don't have an account? Sign up"); // back on the login page
   });
 });
