@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-nested-ternary */
 import { useContext } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import usePhotos from '../hooks/use-photos';
