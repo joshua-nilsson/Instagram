@@ -31,7 +31,7 @@ export default function Header() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 bg-black-faded bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -80,7 +80,7 @@ export default function Header() {
                         className={`${
                           isChecked
                             ? 'bg-blue-medium focus-visible:ring-blue-medium'
-                            : 'bg-gray-base focus-visible:ring-gray-base'
+                            : 'bg-gray-alt focus-visible:ring-gray-alt'
                         } relative inline-flex h-6 w-11 items-center align-middle rounded-full mt-4 msm:mt-0 msm:ml-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2`}
                         onChange={() => setIsChecked(!isChecked)}
                         onKeyDown={({ key }) => key === 'Enter' && setIsChecked(!isChecked)}
