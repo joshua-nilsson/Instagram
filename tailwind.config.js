@@ -1,8 +1,21 @@
+const { screens } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true
   },
+  content: [
+    './src/components/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/*.{js,ts,jsx,tsx}',
+    './src/pages/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
+    screens: {
+      xs: '350px',
+      msm: '425px',
+      ...screens,
+      '3xl': '2250px'
+    },
     fill: (theme) => ({
       red: theme('colors.red.primary')
     }),
