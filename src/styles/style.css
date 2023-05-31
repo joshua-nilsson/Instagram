@@ -540,6 +540,21 @@ video {
   width: 100%;
 }
 
+@media (min-width: 425px) {
+
+  .msm\:ml-4 {
+    margin-left: 1rem !important;
+  }
+
+  .msm\:mt-0 {
+    margin-top: 0px !important;
+  }
+
+  .msm\:inline-flex {
+    display: inline-flex !important;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
