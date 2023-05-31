@@ -11,7 +11,7 @@ export default function Dashboard({ user: loggedInUser }) {
 
   useEffect(() => {
     document.title = 'Instagram';
-  }, [user?.userId]);
+  }, []);
 
   return (
     <LoggedInUserContext.Provider value={{ user }}>
