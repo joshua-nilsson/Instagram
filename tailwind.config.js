@@ -31,7 +31,8 @@ module.exports = {
       gray: {
         base: '#616161',
         background: '#fafafa',
-        primary: '#dbdbdb'
+        primary: '#dbdbdb',
+        alt: '#e5e7eb'
       },
       red: {
         primary: '#ed4956'
